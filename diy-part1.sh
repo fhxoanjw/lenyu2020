@@ -40,7 +40,7 @@ rm -rf bin/targets/x86/64/sha256sums
 rm -rf  bin/targets/x86/64/version.buildinfo
 sleep 2
 rename_version=`cat files/etc/lenyu_version`
-str1=`grep "KERNEL_PATCHVER:="  target/linux/x86/Makefile | cut -d = -f 2` #判断当前默认内核版本号如5.10
+str1=`grep "KERNEL_PATCHVER:=4.14"  target/linux/x86/Makefile | cut -d = -f 2` #判断当前默认内核版本号如5.10
 ver414=`grep "LINUX_VERSION-4.14 ="  include/kernel-4.14 | cut -d . -f 3`
 ver419=`grep "LINUX_VERSION-4.19 ="  include/kernel-4.19 | cut -d . -f 3`
 ver54=`grep "LINUX_VERSION-5.4 ="  include/kernel-5.4 | cut -d . -f 3`
